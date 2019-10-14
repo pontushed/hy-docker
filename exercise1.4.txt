@@ -1,0 +1,19 @@
+Dockerfile  README.md  index.js  logs.txt
+root@99385e554d03:/usr/app# tail -f ./logs.txt 
+Mon, 14 Oct 2019 15:40:58 GMT
+Secret message is:
+"Docker is easy"
+Mon, 14 Oct 2019 15:41:04 GMT
+Mon, 14 Oct 2019 15:41:07 GMT
+Mon, 14 Oct 2019 15:41:10 GMT
+Mon, 14 Oct 2019 15:41:13 GMT
+Secret message is:
+"Docker is easy"
+Mon, 14 Oct 2019 15:41:19 GMT
+Mon, 14 Oct 2019 15:41:22 GMT
+Mon, 14 Oct 2019 15:41:25 GMT
+Mon, 14 Oct 2019 15:41:28 GMT
+Secret message is:
+"Docker is easy"
+Mon, 14 Oct 2019 15:41:34 GMT
+Mon, 14 Oct 2019 15:41:37 GMT
