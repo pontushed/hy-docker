@@ -1,0 +1,4 @@
+docker build -t ex1.12_front front/.
+docker build -t ex1.12_back back/.
+docker run -p 5000:5000 ex1.12_front &
+docker run -p 8000:8000 ex1.12_back &
