@@ -1,0 +1,31 @@
+version: '3'
+services:
+  proxy:
+    image: nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+  database:
+    image: postgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=docker
+  redis:
+    image: redis
+  frontend:
+    image: frontend
+    build: ./frontend/
+    environment:
+      - API_URL=/api
+  backend:
+    restart: unless-stopped
+    image: backend
+    build: ./backend/
+    environment: 
+      - REDIS=redis
+      - DB_USERNAME=docker
+      - DB_PASSWORD=docker
+      - DB_HOST=database 

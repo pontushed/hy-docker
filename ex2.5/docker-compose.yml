@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  backend:
+    image: ex1.12_back
+    ports:
+      - "8000:8000"
+    environment:
+      - "FRONT_URL=http://localhost:5000"
+      - "REDIS=redis"
+
+  frontend:
+    image: ex1.12_front
+    ports:
+      - "5000:5000"
+    environment:
+      - "API_URL=http://localhost:8000"
+  
+  redis:
+    image: redis_container
+    build: .
+    ports:
+      - "6379:6379"
+
