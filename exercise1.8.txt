@@ -1,0 +1,3 @@
+touch logs1.8.txt
+docker run -v /Users/pontus/Programming/hy-docker/logs1.8.txt:/usr/app/logs.txt devopsdockeruh/first_volume_exercise
+
